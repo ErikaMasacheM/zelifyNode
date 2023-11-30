@@ -8,7 +8,8 @@ const sequelize = new Sequelize(
         host: process.env.POSTGRESQL_HOST,
         port: process.env.POSTGRESQL_PORT,
         dialect: 'postgres',
-        // logging: false
+        logging: false // quita los logs de sequelize
     });
+
 
 module.exports = sequelize;
