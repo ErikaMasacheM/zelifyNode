@@ -1,6 +1,6 @@
 # zelifyNode
 
-1. Levantar POSTGRES
+1. Levantar Postgres
 cd dockerPostgres
 docker-compose up --build
 
