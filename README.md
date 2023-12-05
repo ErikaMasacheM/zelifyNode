@@ -1,9 +1,14 @@
 # zelifyNode
 
-Levantar docker
-
+1. Levantar POSTGRES
+cd dockerPostgres
 docker-compose up --build
 
-Graphql
+2. Levantar Node
+docker-compose up --build
 
+* EndPoint
+http://localhost:3001/v1/transaction/
+
+* Graphql
 http://localhost:3001/graphql
