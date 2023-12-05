@@ -14,6 +14,22 @@ const createTransaction = async (req = Request, res = Response) => {
     }
 }
 
+const getTransactions = async () =>{
+    try {
+        const tranasaccions = await Transaction.findAll();
+        console.log(tranasaccions);
+        if (tranasaccions) {
+            return tranasaccions;
+        }
+        return [];
+    } catch (error) {
+        console.log(error);
+    }
+    
+    
+}
+
 module.exports = {
-    createTransaction: createTransaction
+    createTransaction: createTransaction,
+    getTransactions: getTransactions
 }

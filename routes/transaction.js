@@ -3,6 +3,6 @@ const { createTransaction } = require('../controllers/transaction');
 
 const router = new Router();
 
-router.get('/', createTransaction);
+router.post('/', createTransaction);
 
 module.exports = router;

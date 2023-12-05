@@ -1,11 +1,13 @@
 const express = require('express');
 const sequelize = require('../database/connection');
+const graphqlHttp = require('../database/graphql');
 
 class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT || 3002;
-        this.trasaccionPath = '/api/transaction';
+        this.trasaccionPath = '/v1/transaction';
+        this.graphqlPath = '/graphql';
         this.connectionDB();
         this.initMiddleware();
         this.routes();
@@ -32,6 +34,7 @@ class Server {
     }
     routes() {
         this.app.use(this.trasaccionPath,require('../routes/transaction'));
+        this.app.use(this.graphqlPath, require('../database/graphql'));
     }
     listen() {
         this.app.listen(this.port, () => console.log(`Server corriendo en ${this.port}`));

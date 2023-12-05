@@ -16,7 +16,7 @@ const Transaction = sequelize.define('transaction', {
         allowNull: false
     },
     amount: {
-        type: DataTypes.DOUBLE(10,2),
+        type: DataTypes.DOUBLE,
         allowNull: false
     },
     createdAt: {

@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 3001:3000
+      - 3001:3002
     env_file: .env 
+
+  
 # docker-compose up --build --force-recreate
